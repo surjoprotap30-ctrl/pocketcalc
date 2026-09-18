@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b0c10">
+<link rel="manifest" href="manifest.json">
+<title>PocketCalc</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="icons/icon-192x192.png"></head>
+
+<body>
+<main class="app">
+
+    <header>
+        <div class="brand">
+            <div class="logo">P</div>
+            <div>
+                <h1>PocketCalc</h1>
+                <span>Simple. Private. Offline.</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="display">
+        <div id="expression"></div>
+        <div id="result">0</div>
+    </section>
+
+    <section class="keys">
+        <button class="action" onclick="clearCalc()">AC</button>
+        <button class="action" onclick="backspace()">⌫</button>
+        <button class="action" onclick="percent()">%</button>
+        <button class="operator" onclick="operator('/')">÷</button>
+
+        <button onclick="number('7')">7</button>
+        <button onclick="number('8')">8</button>
+        <button onclick="number('9')">9</button>
+        <button class="operator" onclick="operator('*')">×</button>
+
+        <button onclick="number('4')">4</button>
+        <button onclick="number('5')">5</button>
+        <button onclick="number('6')">6</button>
+        <button class="operator" onclick="operator('-')">−</button>
+
+        <button onclick="number('1')">1</button>
+        <button onclick="number('2')">2</button>
+        <button onclick="number('3')">3</button>
+        <button class="operator" onclick="operator('+')">+</button>
+
+        <button class="zero" onclick="number('0')">0</button>
+        <button onclick="decimal()">.</button>
+        <button class="equals" onclick="calculate()">=</button>
+    </section>
+
+</main>
+
+<script src="app.js"></script><script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js");</script>
+</body>
+</html>
